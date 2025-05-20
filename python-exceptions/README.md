@@ -1,0 +1,1 @@
+scripts dealing with errors and exceptions
