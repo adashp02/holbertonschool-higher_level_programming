@@ -2,9 +2,10 @@
 
 
 """
-This module creates class Square 
+This module creates class Square
 with private attribute 'size'
 """
+
 
 class Square:
 
