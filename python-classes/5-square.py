@@ -15,19 +15,20 @@ class Square:
     def __init__(self, size=0):
         
         """getter - get the size of the square"""
-        @property
-        def size(self):
+    @property
+    def size(self):
             return (self.__size)
 
         """setter - same name as attribute"""
-        @size.setter
-        def size(self, value):
-            if not isinstance(value, int):
-                raise TypeError("size must be an integer")
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
 
-            elif value < 0:
-                raise ValueError("size must be >= 0")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
             """size is a private attribute"""
+        else:
             self.__size = value
 
     def area(self):
@@ -43,4 +44,3 @@ class Square:
                 for row in range(self.__size):
                     print("#", end="")
                 print()
-
