@@ -15,11 +15,13 @@ class Square:
     def __init__(self, size=0):
         
         """getter - get the size of the square"""
+
     @property
     def size(self):
             return (self.__size)
 
-        """setter - same name as attribute"""
+    """setter - same name as attribute"""
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
