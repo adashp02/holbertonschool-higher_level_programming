@@ -19,18 +19,16 @@ class Square:
         def size(self):
             return (self.__size)
 
-
+        """setter - same name as attribute"""
         @size.setter
         def size(self, value):
-            """setter - if size is not an integer"""
+            if not isinstance(value, int):
+                raise TypeError("size must be an integer")
 
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-
-        elif value < 0:
-            raise ValueError("size must be >= 0")
+            elif value < 0:
+                raise ValueError("size must be >= 0")
             """size is a private attribute"""
-        self.__size = value
+            self.__size = value
 
     def area(self):
         """return the area of the suare"""
