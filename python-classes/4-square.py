@@ -24,15 +24,13 @@ class Square:
         def size(self, value):
             """setter - if size is not an integer"""
 
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
 
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-
-        """size is a private attribute"""
-
-        self.__size = size
+            """size is a private attribute"""
+        self.__size = value
 
     def area(self):
         """return the area of the suare"""
