@@ -31,6 +31,6 @@ class Square:
             """size is a private attribute"""
             self.__size = value
 
-    def area(self):
-        """return the area of the suare"""
-        return (self.__size * self.__size)
+        def area(self):
+            """return the area of the suare"""
+            return (self.__size ** 2)
