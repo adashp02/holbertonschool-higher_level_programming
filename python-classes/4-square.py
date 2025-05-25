@@ -14,11 +14,11 @@ class Square:
 
     def __init__(self, size=0):
         self.size = size
-        
+
     """getter - get the size of the square"""
     @property
     def size(self):
-            return (self.__size)
+        return (self.__size)
 
     """setter - same name as attribute"""
     @size.setter
