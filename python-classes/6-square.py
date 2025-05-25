@@ -40,7 +40,7 @@ class Square:
     @property
     def position(self):
         return (self.__position)
-    
+
     @position.setter
     def position(self, value):
         """set value"""
@@ -59,7 +59,7 @@ class Square:
 
     def my_print(self):
         """print the square"""
-        
+
         pozzy = self.__position
         sizzy = self.__size
         if self.__size is 0:
@@ -69,7 +69,7 @@ class Square:
                 print()
             for _ in range(sizzy):
                 for j in range(sizzy + pozzy[0]):
-                    if j < pozzy [0]:
+                    if j < pozzy[0]:
                         print(" ", end="")
                     else:
                         print("#", end="")
