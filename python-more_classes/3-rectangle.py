@@ -66,7 +66,7 @@ class Rectangle:
         ready to print with character #"""
 
         if self.__width == 0 or self.__height == 0:
-            return ("")        
+            return ("")  
         else:
             rect = ""
             for i in range(self.__height):
@@ -74,5 +74,3 @@ class Rectangle:
                 if i < self.__height - 1:
                     rect += "\n"
         return (rect)
-
-            
