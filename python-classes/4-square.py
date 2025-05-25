@@ -28,8 +28,8 @@ class Square:
 
         elif value < 0:
             raise ValueError("size must be >= 0")
-            """size is a private attribute"""
-            self.__size = value
+        """size is a private attribute"""
+        self.__size = value
 
     def area(self):
         """return the area of the suare"""
