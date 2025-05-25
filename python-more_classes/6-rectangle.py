@@ -8,6 +8,10 @@ with private attribute 'width' and 'height'
 
 
 class Rectangle:
+    """initialize class attribute to count number
+    of instances"""
+
+    number_of_instance = 0
 
     """initialize the instance of Rectangle class
     with attribute width and height"""
