@@ -96,6 +96,6 @@ class Rectangle:
     def __del__(self):
         """function that deletes an instance of a rectangle
         and decrement the number of instances by one"""
- 
+
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
