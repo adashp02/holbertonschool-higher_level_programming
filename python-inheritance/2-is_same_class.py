@@ -9,8 +9,8 @@ def is_same_class(obj, a_class):
 
     Args:
         obj - object to be evaluated
-        a_class - class to be compared against
-    
+        a_class - class to be checked against
+
     Returns:
         False or True
     """
