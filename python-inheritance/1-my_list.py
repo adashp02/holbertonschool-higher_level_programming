@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """creates a class MyList with inheritance
-from list and prints contents of a list of ints sorted"""
+of class list and prints contents of a list of ints sorted"""
 
 
 class MyList(list):
