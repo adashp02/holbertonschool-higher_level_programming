@@ -9,26 +9,26 @@ Using ``integer validator``
 Validate cases:
 
 	>>> bg = BaseGeometry()
-    	>>> bg.integer_validator("Antek", 89)
+    >>> bg.integer_validator("Antek", 89)
 	>>> bg.integer_validator("Betty", "Holberton")
-    	Traceback (most recent call last):
+    Traceback (most recent call last):
 	...
 	TypeError: Betty must be an integer
 	>>> bg.integer_validator("Dutton", [-10, 3, 9])
-    	Traceback (most recent call last):
+    Traceback (most recent call last):
 	...
 	TypeError: Dutton must be an integer
 	>>> bg.integer_validator("Zombie", 3 + 6)
 	>>> bg.integer_validator("Melbourne", 'Hello')
-    	Traceback (most recent call last):
+    Traceback (most recent call last):
 	...
 	TypeError: Melbourne must be an integer
-    	>>> bg.integer_validator("Cali", -153)
-    	Traceback (most recent call last):
+    >>> bg.integer_validator("Cali", -153)
+    Traceback (most recent call last):
 	...
 	ValueError: Cali must be greater than 0
-    	>>> bg.integer_validator("SF", 0)
-    	Traceback (most recent call last):
+    >>> bg.integer_validator("SF", 0)
+    Traceback (most recent call last):
 	...
 	ValueError: SF must be greater than 0
 	>>> bg.area()
