@@ -17,12 +17,12 @@ Validate cases:
 	>>> bg.integer_validator("Dutton", [-10, 3, 9])
     	Traceback (most recent call last):
 	...
-	TypeError: Holbie must be an integer
+	TypeError: Dutton must be an integer
 	>>> bg.integer_validator("Zombie", 3 + 6)
 	>>> bg.integer_validator("Melbourne", 'Hello')
     	Traceback (most recent call last):
 	...
-	TypeError: Medellin must be an integer
+	TypeError: Melbourne must be an integer
     	>>> bg.integer_validator("Cali", -153)
     	Traceback (most recent call last):
 	...
