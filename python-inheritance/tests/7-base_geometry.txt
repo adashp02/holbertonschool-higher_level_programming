@@ -1,6 +1,5 @@
 
 # 7-base_geometry.txt
-# Brennan D Baraban <375@holbertonschool.com>
 
 =============================
 How to Use 7-base_geometry.py
@@ -33,7 +32,7 @@ in a TypeError.
 
     >>> bg = BaseGeometry(None)
     Traceback (most recent call last):
-    TypeError: object() takes no parameters
+    TypeError: object() takes no arguments
 
 Methods
 =======
@@ -82,7 +81,7 @@ But, if ``value`` is not an integer, a ``TypeError`` is raised.
 
 ::
 
-    >>> bg.integer_validator("another invalid", True)
+    >>> bg.integer_validator("another_invalid", True)
     Traceback (most recent call last):
     TypeError: another invalid must be an integer
 
