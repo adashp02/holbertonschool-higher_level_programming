@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """function that returns True if
 an object is an instance of a class inherited
-from a specified class
+fr_m a specified class
 """
 
 
 def inherits_from(obj, a_class):
     """function validating that obj is an instance
-    of a class inherited fr a specified class
+    of a class inherited fr_m a specified class
 
     Args:
         obj - object to be evaluated
