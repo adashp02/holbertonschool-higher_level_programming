@@ -3,7 +3,6 @@
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-
 class Rectangle(BaseGeometry):
     """class Rectangle inherited from BaseGeometry"""
 
@@ -14,8 +13,7 @@ class Rectangle(BaseGeometry):
         width (int): width of a new rectangle
         height (int) height of a new rectangle"""
 
-
-        """width and height are positive ints validated 
+        """width and height are positive ints validated
         by Int validator that's inherited
         they are also private"""
 
