@@ -7,7 +7,7 @@ from a specified class
 
 def inherits_from(obj, a_class):
     """function validating that obj is an instance
-    of a_class inherited from a specified class
+    of a class inherited fr a specified class
 
     Args:
         obj - object to be evaluated
