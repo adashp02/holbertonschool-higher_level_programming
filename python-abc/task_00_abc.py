@@ -15,26 +15,26 @@ class Animal(ABC):
         """
         pass
 
-    class Dog(Animal):
-        """class representing a Dog, subclass of Animal"""
+class Dog(Animal):
+    """class representing a Dog, subclass of Animal"""
 
-        def sound(self):
-            """returns sound made by a dog
+    def sound(self):
+        """returns sound made by a dog
             
-            Returns:
-                str: 'Bark'
+        Returns:
+            str: 'Bark'
             """
-            return "Bark"
+        return "Bark"
         
-    class Cat(Animal):
-        """class representing a cat, subclass of Animal"""
+class Cat(Animal):
+    """class representing a cat, subclass of Animal"""
 
-        def sound(self):
-            """returns sound made by a cat
+    def sound(self):
+        """returns sound made by a cat
             
-            Returns
-                str: 'Meow'
-            """
+        Returns
+            str: 'Meow'
+        """
 
-            return "Meow"
+        return "Meow"
  
