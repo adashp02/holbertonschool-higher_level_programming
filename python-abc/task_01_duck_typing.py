@@ -76,27 +76,27 @@ class Rectangle(Shape):
             Returns:
                 float - perimeter of the rectangle
         """
-    def shape_info(Shape):
-        """Print area and perimeter of a shape
-            this method invokes duck typing
-            you can trust that the passed object
-            adheres to the Shape interface. 
+def shape_info(shape):
+    """Print area and perimeter of a shape
+        this method invokes duck typing
+        you can trust that the passed object
+        adheres to the Shape interface. 
             
-            Arg: shape (from Shape)
-                object with area and perimeter methods
-        """
-        print("Area: {}".format(shape.area()))
-        print("Perimeter: {}".format(shape.perimeter()))
+        Arg: shape (from Shape)
+        object with area and perimeter methods
+    """
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
 
-    #Usage - test
-    if __name__ == "__main__":
-        circle = Circle(7)
-        rectangle = Rectangle(4, 5)
+#Usage - test
+if __name__ == "__main__":
+    circle = Circle(7)
+    rectangle = Rectangle(4, 5)
 
-        print("Circle:")
-        shape_info(circle)
-        #it should print area + perimeter of the circle
+    print("Circle:")
+    shape_info(circle)
+    #it should print area + perimeter of the circle
 
-        print("\nRectangle:")
-        shape_info(rectangle)
-        #it should print area + perimeter of the rectangle
+    print("\nRectangle:")
+    shape_info(rectangle)
+    #it should print area + perimeter of the rectangle
