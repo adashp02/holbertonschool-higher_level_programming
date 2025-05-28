@@ -28,7 +28,7 @@ class Circle(Shape):
     """class representing a circle, inherited from Shape"""
 
     def __init__(self, radius):
-        self.radius = radius
+        self.__radius = abs(radius) #make sure its abolute value
         """initialize a circle with a radius
         
         Args:
