@@ -76,9 +76,9 @@ class Rectangle(Shape):
             Returns:
                 float - perimeter of the rectangle
         """
-    def shape_info(shape):
+    def shape_info(Shape):
         """Print area and perimeter of a shape
-            this method evokes duck typing
+            this method invokes duck typing
             you can trust that the passed object
             adheres to the Shape interface. 
             
