@@ -1,0 +1,1 @@
+scripts exploring input-output
