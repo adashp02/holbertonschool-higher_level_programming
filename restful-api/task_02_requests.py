@@ -28,8 +28,8 @@ def fetch_and_print_posts():
         json_data = response.json()
 
     #printing titles of all posts
-    for posts in json_data:
-        print(posts["title"])
+        for posts in json_data:
+            print(posts["title"])
 
     #if not successful
     else:
