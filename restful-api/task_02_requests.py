@@ -21,7 +21,7 @@ def fetch_and_print_posts():
     response = requests.get(url)
 
     #printing response status code
-    print("Status code: {}".format(response.status_code))
+    print("Status Code: {}".format(response.status_code))
 
     #fetching data if response code successful
     if response.status_code == 200:
