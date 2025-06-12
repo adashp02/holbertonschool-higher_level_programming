@@ -37,6 +37,8 @@ def get_user(username):
 #/add_user - function with POST method, parsing incoming data into the list of users
 @app.route("/add_user", methods=["POST"])
 def add_user():
+    if request.get_json is None:
+        return jsonify({"error": "Username is required"}), 400
     user_data = request.get_json()
     username = user_data.get("username")
     if not username:
