@@ -41,12 +41,12 @@ def add_user():
     if req_data is None or req_data("username") is None:
         return jsonify({"error": "Username is required"}), 400
     user = {
-        "username": req_data.get("username"),
-        "name": req_data.get("name"),
-        "age": req_data.get("age"),
-        "city": req_data.get("city")
+        "username": req_data("username"),
+        "name": req_data("name"),
+        "age": req_data("age"),
+        "city": req_data("city")
     }
-    users[user.get("username")] = user
+    users[req_data("username")] = user
     return jsonify({"message": "User added", "user": user}), 201
 
 """initialize the Flask server"""
