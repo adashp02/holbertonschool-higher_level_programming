@@ -38,7 +38,7 @@ def get_user(username):
 @app.route("/add_user", methods=["POST"])
 def add_user():
     req_data = request.get_json
-    if req_data is None or req_data("usename") is None:
+    if req_data is None or req_data("username") is None:
         return jsonify({"error": "Username is required"}), 400
     user = {
         "username": req_data.get("username"),
@@ -46,7 +46,7 @@ def add_user():
         "age": req_data.get("age"),
         "city": req_data.get("city")
     }
-    users[req_data.get("uername")] = user
+    users[user.get("username")] = user
     return jsonify({"message": "User added", "user": user}), 201
 
 """initialize the Flask server"""
