@@ -37,17 +37,12 @@ def get_user(username):
 #/add_user - function with POST method, parsing incoming data into the list of users
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    req_data = request.get_json
-    if req_data is None or req_data("username") is None:
+    user_data = request.get_json()
+    username = user_data.get("username")
+    if not username:
         return jsonify({"error": "Username is required"}), 400
-    user = {
-        "username": req_data("username"),
-        "name": req_data("name"),
-        "age": req_data("age"),
-        "city": req_data("city")
-    }
-    users[req_data("username")] = user
-    return jsonify({"message": "User added", "user": user}), 201
+    users[username] = user_data
+    return jsonify({"message": "User added", "user": user_data}), 201
 
 """initialize the Flask server"""
 if __name__ == "__main__":
