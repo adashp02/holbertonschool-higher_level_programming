@@ -32,7 +32,7 @@ def get_user(username):
     if user:
         return jsonify(user)
     else:
-        return jsonify({"error": "user not found"}), 404
+        return jsonify({"error": "User not found"}), 404
     
 #/add_user - function with POST method, parsing incoming data into the list of users
 @app.route("/add_user", methods=["POST"])
