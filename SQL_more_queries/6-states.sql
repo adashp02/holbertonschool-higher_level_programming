@@ -3,5 +3,5 @@
     USE hbtn_0d_usa;
     CREATE TABLE IF NOT EXISTS states (
         id int NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-        NAME varchar(256) NOT NULL
+        name varchar(256) NOT NULL
     );
