@@ -1,8 +1,9 @@
--- creates the database hbtn_0d_usa and the table cities
+-- A script that creates the database hbtn_0d_usa and the table cities.
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS cities (
-    id int NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
-    state_id int NOT NULL FOREIGN KEY REFERENCES states (id),
-    name varchar(256) NOT NULL
+    id INT AUTO_INCREMENT UNIQUE NOT NULL PRIMARY KEY,
+    state_id INT NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    FOREIGN KEY (state_id) REFERENCES states (id)
 );
