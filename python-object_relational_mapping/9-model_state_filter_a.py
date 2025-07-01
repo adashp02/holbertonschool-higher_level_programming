@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Module for fetching all states containing letter 'a'.
