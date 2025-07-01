@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-script that prints the State object with the
-name passed as argument from the database.
+Module for adding Louisiana.
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -23,16 +22,13 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # The Query
-    state = (session.query(State)
-             .filter(State.name == argv[4])
-             .first())
+    # Creating new city instance and adding it do db
+    s = State(name='Louisiana')
+    session.add(s)
+    session.commit()
 
-    # Printing the result
-    if state is None:
-        print("Not found")
-    else:
-        print(state.id)
+    # Printing the new State id
+    print(s.id)
 
     # Closing the session
     session.close()
