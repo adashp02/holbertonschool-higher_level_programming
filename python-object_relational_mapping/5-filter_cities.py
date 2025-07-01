@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists all cities with their states - inner join"""
+"""lists all cities that match state supplied as an arg - inner join"""
 
 
 if __name__ == '__main__':
