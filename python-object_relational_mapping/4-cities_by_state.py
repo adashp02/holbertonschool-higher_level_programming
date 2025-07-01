@@ -14,11 +14,13 @@ if __name__ == '__main__':
     )
     cursor = db.cursor()
 
-    cursor.execute('SELECT * FROM states ORDER BY id')
+    cursor.execute('SELECT c.id, c.name, s.name\
+                   FROM cities AS c\
+                   INNER JOIN states AS s ON s.id = c.state_id\
+                   ORDER BY c.id ASC')
 
     for state in cursor.fetchall():
-        if state[1] == argv[4]:
-            print(state)
+        print(state)
 
     cursor.close()
     db.close()
