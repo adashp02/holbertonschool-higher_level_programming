@@ -13,13 +13,16 @@ if __name__ == '__main__':
     )
     cursor = db.cursor()
 
-    cursor.execute('SELECT c.id, c.name, s.name\
+    cursor.execute('SELECT c.name, s.name\
                    FROM cities AS c\
-                   INNER JOIN states AS s ON s.id = c.state_id\
-                   ORDER BY c.id ASC')
+                   INNER JOIN states AS s\
+                   ON s.id = c.state_id')
 
-    for state in cursor.fetchall():
-        print(state)
+    cities = []
+    for city in cursor.fetchall():
+        if city[1] == argv[4]:
+            cities.append(city[0])
+    print(", ".join(cities))
 
     cursor.close()
     db.close()
