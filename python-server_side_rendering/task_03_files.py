@@ -44,31 +44,22 @@ def read_csv():
     return products
 
 @app.route('/products')
-def products():
+def display_products():
     source = request.args.get('source')
     product_id = request.args.get('id')
-    file_path = ''
 
     if source == 'json':
-        file_path = 'products.json'
+        products = read_json()
 
     elif source == 'csv':
-        file_path = 'products.csv'
+        products = read_csv()
 
     else:
         return render_template('product_display.html', error="Wrong source")
     
-    if not os.path.exists(file_path):
-        return render_template('product_display.html', error="File not found")
-
-    if source == 'json':
-        products = read_json(file_path)
-    else:
-        products = read_csv(file_path)
-
+    
     if product_id:
-        product_id = int(product_id)
-        products = [prod for prod in products if prod['id'] == product_id]
+        products = [prod for prod in products if str(prod['id']) == product_id]
         if not products:
             return render_template('product_display.html', error="Product not found")
         
